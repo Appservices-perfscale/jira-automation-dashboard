@@ -1,0 +1,57 @@
+[
+    {
+        "service": "InsightsEdge_updates_runner",
+        "assignee": "rajchauh@redhat.com"
+    },
+    {
+        "service": "InsightsEdge_runner",
+        "assignee": "rajchauh@redhat.com"
+    },
+    {
+        "service": "InsightsEngine_runner",
+        "assignee": "rajchauh@redhat.com"
+    },
+    {
+        "service": "InsightsInventory_runner",
+        "assignee": "rajchauh@redhat.com"
+    },
+    {
+        "service": "InsightsRBAC_runner",
+        "assignee": "rajchauh@redhat.com"
+    },
+    {
+        "service": "InsightsFrontEnd_runner",
+        "assignee": "lrios@redhat.com"
+    },
+    {
+        "service": "InsightsContentSources_runner",
+        "assignee": "pablomh@redhat.com"
+    }, {
+        "service": "InsightsCCX_runner",
+        "assignee": "jsmejkal@redhat.com"
+    },
+    {
+        "service": "InsightsDVO_runner",
+        "assignee": "jsmejkal@redhat.com"
+    },
+    {
+        "service": "InsightsCompliance_runner",
+        "assignee": "jsmejkal@redhat.com"
+    },
+    {
+        "service": "InsightsInventory_Export_runner",
+        "assignee": "rajchauh@redhat.com"
+    },
+    {
+        "service": "InsightsInventoryXjoinless_runner",
+        "assignee": "jsmejkal@redhat.com"
+    },
+    {
+        "service": "InsightsNotifications_runner",
+        "assignee": "lrios@redhat.com"
+    },
+    {
+        "service": "InsightsInsightsCore_runner",
+        "assignee": "vvijayra@redhat.com"
+    }
+]
