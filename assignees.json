@@ -1,57 +1,57 @@
 [
     {
         "service": "InsightsEdge_updates_runner",
-        "assignee": "rajchauh@redhat.com"
+        "assignee": "rajchauh"
     },
     {
         "service": "InsightsEdge_runner",
-        "assignee": "rajchauh@redhat.com"
+        "assignee": "rajchauh"
     },
     {
         "service": "InsightsEngine_runner",
-        "assignee": "rajchauh@redhat.com"
+        "assignee": "rajchauh"
     },
     {
         "service": "InsightsInventory_runner",
-        "assignee": "rajchauh@redhat.com"
+        "assignee": "rajchauh"
     },
     {
         "service": "InsightsRBAC_runner",
-        "assignee": "rajchauh@redhat.com"
+        "assignee": "rajchauh"
     },
     {
         "service": "InsightsFrontEnd_runner",
-        "assignee": "lrios@redhat.com"
+        "assignee": "lrios"
     },
     {
         "service": "InsightsContentSources_runner",
-        "assignee": "pablomh@redhat.com"
+        "assignee": "pablomh"
     }, {
         "service": "InsightsCCX_runner",
-        "assignee": "jsmejkal@redhat.com"
+        "assignee": "jsmejkal"
     },
     {
         "service": "InsightsDVO_runner",
-        "assignee": "jsmejkal@redhat.com"
+        "assignee": "jsmejkal"
     },
     {
         "service": "InsightsCompliance_runner",
-        "assignee": "jsmejkal@redhat.com"
+        "assignee": "jsmejkal"
     },
     {
         "service": "InsightsInventory_Export_runner",
-        "assignee": "rajchauh@redhat.com"
+        "assignee": "rajchauh"
     },
     {
         "service": "InsightsInventoryXjoinless_runner",
-        "assignee": "jsmejkal@redhat.com"
+        "assignee": "jsmejkal"
     },
     {
         "service": "InsightsNotifications_runner",
-        "assignee": "lrios@redhat.com"
+        "assignee": "lrios"
     },
     {
         "service": "InsightsInsightsCore_runner",
-        "assignee": "vvijayra@redhat.com"
+        "assignee": "vvijayra"
     }
 ]

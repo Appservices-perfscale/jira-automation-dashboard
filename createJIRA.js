@@ -6,6 +6,7 @@ const JIRA_BASE_URL = process.env.JIRA_URL;
 const JIRA_API_TOKEN =  process.env.JIRA_TOKEN;
 const PROJECT_KEY = process.env.JIRA_PROJECT_KEY;
 const BOARD_ID = process.env.JIRA_PROJECT_BOARD_ID;
+const JIRA_USER_DOMAIN = process.env.JIRA_USER_DOMAIN
 const QUERY = {
   query: {
     bool: {
@@ -163,7 +164,7 @@ const main = async () => {
           summary: statement,
           description: description,
           assignee: {
-            name : assignee
+            name : `${assignee}@${JIRA_USER_DOMAIN}`
           },
           issuetype: {
               name: 'Task'
