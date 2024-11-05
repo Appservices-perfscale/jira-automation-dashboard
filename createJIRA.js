@@ -164,7 +164,7 @@ const main = async () => {
           summary: statement,
           description: description,
           assignee: {
-            name : `${assignee}@${JIRA_USER_DOMAIN}`
+            name : `${assignee}`
           },
           issuetype: {
               name: 'Task'

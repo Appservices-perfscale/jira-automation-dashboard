@@ -21,22 +21,22 @@
     },
     {
         "service": "InsightsFrontEnd_runner",
-        "assignee": "lrios"
+        "assignee": "rhn-engineering-lrios"
     },
     {
         "service": "InsightsContentSources_runner",
-        "assignee": "pablomh"
+        "assignee": "rhn-engineering-pablomh"
     }, {
         "service": "InsightsCCX_runner",
-        "assignee": "jsmejkal"
+        "assignee": "rhn-engineering-jsmejkal"
     },
     {
         "service": "InsightsDVO_runner",
-        "assignee": "jsmejkal"
+        "assignee": "rhn-engineering-jsmejkal"
     },
     {
         "service": "InsightsCompliance_runner",
-        "assignee": "jsmejkal"
+        "assignee": "rhn-engineering-jsmejkal"
     },
     {
         "service": "InsightsInventory_Export_runner",
@@ -44,11 +44,11 @@
     },
     {
         "service": "InsightsInventoryXjoinless_runner",
-        "assignee": "jsmejkal"
+        "assignee": "rhn-engineering-jsmejkal"
     },
     {
         "service": "InsightsNotifications_runner",
-        "assignee": "lrios"
+        "assignee": "rhn-engineering-lrios"
     },
     {
         "service": "InsightsInsightsCore_runner",
