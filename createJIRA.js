@@ -88,6 +88,8 @@ async function fetchSprints() {
 const createJIRAIssue = async (issueData) =>{
   if(JIRA_API_TOKEN==='')
       console.log("Token field empty")
+  else
+      console.log("Token not empty")
   const response = await axios.post(`${JIRA_BASE_URL}/rest/api/2/issue`, issueData, {
         headers: {
           'Content-Type': 'application/json',
