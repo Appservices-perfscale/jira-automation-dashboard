@@ -89,10 +89,10 @@ const createJIRAIssue = async (issueData) =>{
   if(JIRA_API_TOKEN==='')
       console.log("Token field empty")
   else
-      console.log("Token not empty")
+      console.log(JIRA_API_TOKEN.length)
   const response = await axios.post(`${JIRA_BASE_URL}/rest/api/2/issue`, issueData, {
         headers: {
-          'content-Type': 'application/json',
+          'Content-Type': 'application/json',
           'Authorization': `Bearer ${JIRA_API_TOKEN}` ,
         },
       });
