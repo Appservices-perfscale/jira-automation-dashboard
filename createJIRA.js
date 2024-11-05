@@ -3,7 +3,7 @@ const axios = require('axios');
 require('dotenv').config();
 const ELASTICSEARCH_URL = process.env.ES_URL;
 const JIRA_BASE_URL = process.env.JIRA_URL;
-const JIRA_API_TOKEN =  process.env.JIRA_TOKEN ? process.env.JIRA_TOKEN.replace(/[\n\r]/g, '') : '';
+const JIRA_API_TOKEN =  process.env.JIRA_TOKEN ? process.env.JIRA_TOKEN.replace(/[\n\r]/g, '').trim() : '';
 const PROJECT_KEY = process.env.JIRA_PROJECT_KEY;
 const BOARD_ID = process.env.JIRA_PROJECT_BOARD_ID;
 const JIRA_USER_DOMAIN = process.env.JIRA_USER_DOMAIN
