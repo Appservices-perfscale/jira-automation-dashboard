@@ -8,6 +8,7 @@ const PROJECT_KEY = process.env.JIRA_PROJECT_KEY;
 const BOARD_ID = process.env.JIRA_PROJECT_BOARD_ID;
 const JIRA_USER_DOMAIN = process.env.JIRA_USER_DOMAIN
 const QUERY = {
+  size: 10000,
   query: {
     bool: {
       must: [
