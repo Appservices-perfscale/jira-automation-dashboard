@@ -6,7 +6,8 @@ const JIRA_BASE_URL = process.env.JIRA_URL;
 const JIRA_API_TOKEN =  process.env.JIRA_TOKEN ? process.env.JIRA_TOKEN.replace(/[\n\r]/g, '').trim() : '';
 const PROJECT_KEY = process.env.JIRA_PROJECT_KEY;
 const BOARD_ID = process.env.JIRA_PROJECT_BOARD_ID;
-const JIRA_USER_DOMAIN = process.env.JIRA_USER_DOMAIN
+const JIRA_USER_DOMAIN = process.env.JIRA_USER_DOMAIN;
+const RESULTS_DASHBOARD_ELASTICSEARCH_URL = process.env.RESULT_DASHBOARD_ES_URL;
 const QUERY = {
   size: 10000,
   query: {
@@ -29,6 +30,24 @@ const QUERY = {
     }
   }
 };
+
+const RP_QUERY = {
+  size: 10000,
+  query: {
+    bool: {
+      must: [
+        {
+          range: {
+            date: {
+              gte: 'now-7d/d',
+              lt: 'now/d'
+            }
+          }
+        }
+      ]
+}
+}
+}
 
 async function updateIssueWithStoryPoints(issueKey){
   const url = `${JIRA_BASE_URL}/rest/api/2/issue/${issueKey}`;
@@ -106,12 +125,23 @@ async function fetchData () {
       headers: { 'Content-Type': 'application/json' },
       data: QUERY
     });
-    
-    const results = response.data.hits.hits.map(hit => hit._source);
 
+
+    const results = response.data.hits.hits.map(hit => hit._source);
+    const response_rp= await axios.get(RESULTS_DASHBOARD_ELASTICSEARCH_URL,{
+     headers:{ 'Content-Type':'application/json'},
+     data: RP_QUERY
+    })
+
+    const results_rp= response_rp.data.hits.hits
+    const url_pass_fail_map=new Map();
+    results_rp.forEach(result_rp => {
+      url_pass_fail_map.set(result_rp._source.link,result_rp._source.result)
+    });
     const resultMap=new Map();
     const numberMap=new Map();
     results.forEach(result => {
+      if (url_pass_fail_map.get(result.build_url)==='FAIL'){
       let key=result.job_name.substring(8);
       lastIndex=key.lastIndexOf('_');
       key=key.substring(0,lastIndex);
@@ -133,6 +163,7 @@ async function fetchData () {
         val=numberMap.get(key+"_"+result.description)
         numberMap.set(key+"_"+result.description, val+1)
       }
+    }
     });
 
     return {resultMap , numberMap};
@@ -173,7 +204,8 @@ const main = async () => {
       }
   }
   createJIRAIssue(issueData)
-  })    
+  }
+  )    
 };
 
 
