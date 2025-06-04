@@ -126,7 +126,6 @@ async function fetchData() {
       data: QUERY
     });
 
-
     const results = response.data.hits.hits.map(hit => hit._source);
     const response_rp = await axios.get(RESULTS_DASHBOARD_ELASTICSEARCH_URL, {
       headers: { 'Content-Type': 'application/json' },
@@ -189,23 +188,25 @@ const main = async () => {
     })
     const description = `Runs failing : ${runNumbers} \n ${shortDescription}`
     let assignee = assignees.find(assignee => assignee.service === `Insights${key}_runner`);
-    assignee = assignee.assignee
-    const issueData = {
-      fields: {
-        project: {
-          key: PROJECT_KEY
-        },
-        summary: statement,
-        description: description,
-        assignee: {
-          name: `${assignee}`
-        },
-        issuetype: {
-          name: 'Task'
+    if (assignee !== undefined) {
+      assignee = assignee.assignee
+      const issueData = {
+        fields: {
+          project: {
+            key: PROJECT_KEY
+          },
+          summary: statement,
+          description: description,
+          assignee: {
+            name: `${assignee}`
+          },
+          issuetype: {
+            name: 'Task'
+          }
         }
       }
+      createJIRAIssue(issueData)
     }
-    createJIRAIssue(issueData)
   }
   )
 };

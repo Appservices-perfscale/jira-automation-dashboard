@@ -1,57 +1,66 @@
 [
-    {
-        "service": "InsightsEdge_updates_runner",
-        "assignee": "rajchauh"
-    },
-    {
-        "service": "InsightsEdge_runner",
-        "assignee": "rajchauh"
-    },
-    {
-        "service": "InsightsEngine_runner",
-        "assignee": "rajchauh"
-    },
-    {
-        "service": "InsightsInventory_runner",
-        "assignee": "rajchauh"
-    },
-    {
-        "service": "InsightsRBAC_runner",
-        "assignee": "rajchauh"
-    },
-    {
-        "service": "InsightsFrontEnd_runner",
-        "assignee": "rhn-engineering-lrios"
-    },
-    {
-        "service": "InsightsContentSources_runner",
-        "assignee": "rhn-engineering-pablomh"
-    }, {
-        "service": "InsightsCCX_runner",
-        "assignee": "rhn-engineering-jsmejkal"
-    },
-    {
-        "service": "InsightsDVO_runner",
-        "assignee": "rhn-engineering-jsmejkal"
-    },
-    {
-        "service": "InsightsCompliance_runner",
-        "assignee": "rhn-engineering-jsmejkal"
-    },
-    {
-        "service": "InsightsInventory_Export_runner",
-        "assignee": "rajchauh"
-    },
-    {
-        "service": "InsightsInventoryXjoinless_runner",
-        "assignee": "rhn-engineering-jsmejkal"
-    },
-    {
-        "service": "InsightsNotifications_runner",
-        "assignee": "rhn-engineering-lrios"
-    },
-    {
-        "service": "InsightsInsightsCore_runner",
-        "assignee": "vvijayra"
-    }
+  {
+    "service": "InsightsEngine_runner",
+    "assignee": "rajchauh"
+  },
+  {
+    "service": "InsightsInventory_runner",
+    "assignee": "rajchauh"
+  },
+  {
+    "service": "InsightsRBAC_runner",
+    "assignee": "rajchauh"
+  },
+  {
+    "service": "InsightsFrontEnd_runner",
+    "assignee": "rhn-engineering-lrios"
+  },
+  {
+    "service": "InsightsContentSources_runner",
+    "assignee": "rhn-engineering-pablomh"
+  },
+  {
+    "service": "InsightsCCX_runner",
+    "assignee": "rhn-engineering-jsmejkal"
+  },
+  {
+    "service": "InsightsDVO_runner",
+    "assignee": "rhn-engineering-jsmejkal"
+  },
+  {
+    "service": "InsightsCompliance_runner",
+    "assignee": "rhn-engineering-jsmejkal"
+  },
+  {
+    "service": "InsightsInventory_Export_runner",
+    "assignee": "rajchauh"
+  },
+  {
+    "service": "InsightsInventoryXjoinless_runner",
+    "assignee": "rhn-engineering-jsmejkal"
+  },
+  {
+    "service": "InsightsNotificationsgw_runner",
+    "assignee": "rhn-engineering-lrios"
+  },
+  {
+    "service": "InsightsNotificationsemail_runner",
+    "assignee": "rhn-engineering-lrios"
+  },
+  {
+    "service": "InsightsNotificationswebhook_runner",
+    "assignee": "rhn-engineering-lrios"
+  },
+  {
+    "service": "InsightsInsightsCore_runner",
+    "assignee": "vvijayra"
+  },
+  {
+    "service": "InsightsPlaybookDispatcher_runner",
+    "assignee": "rajchauh"
+  },
+  {
+    "service": "InsightsROS_runner",
+    "assignee": "rhn-engineering-jsmejkal"
+  }
 ]
