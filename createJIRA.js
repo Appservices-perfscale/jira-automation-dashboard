@@ -16,8 +16,8 @@ const QUERY = {
         {
           range: {
             uploaded: {
-              gte: 'now-7d/d',
-              lt: 'now/d'
+              gte: 'now-14d/d',
+              lt: 'now-8d/d'
             }
           }
         },
@@ -39,8 +39,8 @@ const RP_QUERY = {
         {
           range: {
             date: {
-              gte: 'now-7d/d',
-              lt: 'now/d'
+              gte: 'now-14d/d',
+              lt: 'now-8d/d'
             }
           }
         }
@@ -117,6 +117,7 @@ const createJIRAIssue = async (issueData) => {
   const sprint_id = await fetchSprints();
   await addIssueToSprint(issueKey, sprint_id);
   await updateIssueWithStoryPoints(issueKey)
+
 }
 
 async function fetchData() {
@@ -172,7 +173,7 @@ async function fetchData() {
 
 const main = async () => {
   const { resultMap, numberMap } = await fetchData();
-  resultMap.forEach((value, key) => {
+  for ([key, value] of resultMap) {
     let numberOfFails = value.indexOf('*')
     let runNumbers = value.slice(0, value.indexOf('*'))
     let reasonOfFailue = value.indexOf('*') !== -1 ? value.slice(value.indexOf('*') + 1) : [];
@@ -205,10 +206,10 @@ const main = async () => {
           }
         }
       }
-      createJIRAIssue(issueData)
+      await createJIRAIssue(issueData)
     }
+
   }
-  )
 };
 
 
