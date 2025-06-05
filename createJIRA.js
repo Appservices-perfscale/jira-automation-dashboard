@@ -16,8 +16,8 @@ const QUERY = {
         {
           range: {
             uploaded: {
-              gte: 'now-14d/d',
-              lt: 'now-8d/d'
+              gte: 'now-7d/d',
+              lt: 'now/d'
             }
           }
         },
@@ -39,8 +39,8 @@ const RP_QUERY = {
         {
           range: {
             date: {
-              gte: 'now-14d/d',
-              lt: 'now-8d/d'
+              gte: 'now-7d/d',
+              lt: 'now/d'
             }
           }
         }
