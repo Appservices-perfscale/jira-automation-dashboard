@@ -21,15 +21,15 @@
   },
   {
     "service": "InsightsCCX_runner",
-    "assignee": "rhn-engineering-jsmejkal"
+    "assignee": "vvijayra"
   },
   {
     "service": "InsightsDVO_runner",
-    "assignee": "rhn-engineering-jsmejkal"
+    "assignee": "vvijayra"
   },
   {
     "service": "InsightsCompliance_runner",
-    "assignee": "rhn-engineering-jsmejkal"
+    "assignee": "rajchauh"
   },
   {
     "service": "InsightsInventory_Export_runner",
@@ -37,7 +37,7 @@
   },
   {
     "service": "InsightsInventoryXjoinless_runner",
-    "assignee": "rhn-engineering-jsmejkal"
+    "assignee": "rajchauh"
   },
   {
     "service": "InsightsNotificationsgw_runner",
@@ -61,6 +61,10 @@
   },
   {
     "service": "InsightsROS_runner",
-    "assignee": "rhn-engineering-jsmejkal"
+    "assignee": "vvijayra"
+  },
+  {
+    "service": "InsightsKessel_runner",
+    "assignee":"rhn-engineering-lrios"
   }
 ]
